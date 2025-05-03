@@ -44,6 +44,7 @@ namespace MBwebapi.Controllers
 
             try
             {
+                int i = 0;
                 await _context.Customer.AddAsync(customer);
                 await _context.SaveChangesAsync();
                 return CreatedAtAction(nameof(GetCustomers), new { id = customer.CustId }, customer);
